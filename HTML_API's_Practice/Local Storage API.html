@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8" />
+        <meta name="author" content="Ganesh Naykawadi"/>
+        <meta name="description" content="Demonstration to use of window.localStorage and window.sessionStorage in HTML." />
+        <meta name="keywords" content="HTML, Local Storage/ Session Storage, API" />
+        <title>Browsers Local storage and Session storage</title>
+
+        <!-- Bootstrap CDN -->
+        <!-- compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!-- Style sheets -->
+        <link rel="stylesheet" href="../Stylesheets/Sudo-Style.css">
+        <style>
+            body {
+                margin: auto;
+                width: 40%;
+            }
+
+            form {
+                padding-top: 5  0px;
+            }
+
+            #outputLables {
+              margin-top: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Browsers Local storage and Session storage</h3><br>
+        <form>
+            <div class="form-group">
+                <input type="text" id="txtFirstName" class="form-control" placeholder="first name" />
+            </div>
+            <div class="form-group">
+                <input type="text" id="txtLastName" class="form-control" placeholder="last name" />
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="setLocalStorage();setSessionStorage();">Submit</button>
+            <button type="button" class="btn btn-success" onclick="getLocalStorage();getSessionStorage();">Get Values</button>
+            <button type="button" class="btn btn-danger" onclick="deleteLocalStorage();deleteSessionStorage();">Delete Values</button>
+
+            <div id="outputLables">
+              <label id="lbl-localStorage"></label>
+              <label id="lbl-sessionStorage"></label>
+            </div>
+        </form>
+
+        <!-- javaScript code -->
+        <script>
+
+            if(typeof(Storage) !=="undefined") {
+                debugger;
+
+                // variable declaration
+                let lblLocalStorage = document.getElementById('lbl-localStorage');
+                let lblSessionStorage = document.getElementById('lbl-sessionStorage');
+
+                function setLocalStorage() {
+                    let firstName = document.getElementById('txtFirstName').value;
+                    let lastName = document.getElementById('txtLastName').value;
+                    localStorage.setItem("firstName", firstName);
+                    localStorage.setItem("lastName", lastName);
+                }
+
+                function setSessionStorage() {
+                    let firstName = document.getElementById('txtFirstName').value;
+                    let lastName = document.getElementById('txtLastName').value;
+                    sessionStorage.setItem("firstName", firstName);
+                    sessionStorage.setItem("lastName", lastName);
+                }
+
+                function getLocalStorage() {
+                    lblLocalStorage.innerHTML = "Local storage values are:  <em>01. First Name</em> = "+ localStorage.getItem('firstName') +" / <em>02. Last Name</em> = "+ localStorage.getItem('lastName');
+                }
+
+                function getSessionStorage() {
+                    lblSessionStorage.innerHTML = "Session storage values are:  <em>01. First Name<em> = "+ sessionStorage.getItem('firstName') + " / <em>02. Last Name</em> = "+ sessionStorage.getItem('lastName');
+                }
+
+                function deleteLocalStorage() {
+                    localStorage.removeItem('firstName', 'lastName');
+                    lblLocalStorage.style.color = "red";
+                    lblLocalStorage.innerHTML = "Local Storage Cleared !!";
+                }
+
+                function deleteSessionStorage() {
+                    sessionStorage.removeItem('firstName', 'lastName');
+                    lblSessionStorage.style.color = "red";
+                    lblSessionStorage.innerHTML = "Session Storage Cleared !!";
+                }
+            }
+            else {
+                console.log("Sorry..but your browser does not support local/session storage!");
+            }
+        </script>
+    </body>
+</html>

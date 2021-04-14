@@ -1,0 +1,73 @@
+/********************************************************************************
+
+// Name of Project: CSS 2D Transformation.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 25 July, 2020.
+// HTML File: 2D-Transformation.html
+
+*********************************************************************************/
+
+.header {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.example-box {
+   width: 300px;
+   height: 200px;
+   background-color: yellow;
+}
+
+.translate .example-box:hover {
+   ms-transform: translate(50px, 100px); /* IE 9 */
+   transform: translate(50px, 100px); /* Standard syntax */
+   background-color: green;
+}
+
+.rotate .example-box:hover {
+   ms-transform: rotate(75deg); /* IE 9 */
+   transform: rotate(75deg); /* Standard syntax */
+   background-color: green;
+}
+
+.scaleX .example-box:hover {
+   -ms-transform: scaleX(3);
+   transform: scaleX(3);
+   background-color: green;
+}
+
+.scaleY .example-box:hover {
+   -ms-transform: scaleY(2);
+   transform: scaleY(2);
+   background-color: green;
+}
+
+.skew .example-box:hover {
+   -ms-transform: skew(20deg, 10deg);
+   transform: skew(20deg, 10deg);
+   background-color: green;
+}
+
+.skew .example-box:hover {
+   -ms-transform: skew(20deg, 10deg);
+   transform: skew(20deg, 20deg);
+   background-color: green;
+}
+
+.skewX .example-box:hover {
+   -ms-transform: skewX(30deg);
+   transform: skewX(30deg);
+   background-color: green;
+}
+
+.skewY .example-box:hover {
+   -ms-transform: skewY(45deg);
+   transform: skewY(45deg);
+   background-color: green;
+}
+
+.matrix .example-box:hover {
+   -ms-transform: matrix(1, -0.3, 0, 1, 0, 0);
+   transform: matrix(1, -0.3, 0, 1, 0, 0);
+   background-color: green;
+}

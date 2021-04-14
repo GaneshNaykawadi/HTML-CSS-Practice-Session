@@ -1,0 +1,41 @@
+/********************************************************************************
+
+// Name of Project: CSS Counters.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 19 July, 2020.
+// HTML File: CSS_Counters.html
+
+*********************************************************************************/
+
+.nested-content {
+counter-reset: section;
+}
+/* initialize the counter variable */
+body {
+counter-reset: food-item;
+}
+
+h4 {
+counter-reset: subtype;
+}
+
+ol {
+list-style-type: none;
+}
+
+/* insert the counter variable */
+li::before {
+counter-increment: food-item;
+content: "Item " Counter(food-item)": ";
+}
+
+/* insert the counters variable */
+h4::before {
+counter-increment: section;
+content: "Type " Counter(section) ": ";
+}
+
+h5::before {
+counter-increment: subtype;
+content: "Item " Counter(subtype) ": ";
+}

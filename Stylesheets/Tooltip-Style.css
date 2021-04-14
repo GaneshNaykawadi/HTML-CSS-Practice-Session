@@ -1,0 +1,113 @@
+/********************************************************************************
+
+// Name of Project: HTML ToolTip's Demo.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 01 August, 2020.
+// HTML File: Tooltip.html
+
+*********************************************************************************/
+
+body {
+  font-weight: bold;
+}
+
+.example-div {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+/* hoverable content to show tooltip */
+.tooltip-div {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted grey;
+  margin: 150px 170px 0 0;
+}
+
+/* tooltip style */
+.tooltip-div .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0px;
+  border-radius: 5px;
+
+/* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip-div:hover .tooltip-text {
+  visibility: visible;
+}
+
+/* Position the tooltip to left side */
+.left {
+  right: 107%;
+  top: -5px;
+}
+
+.right {margin-top: -5px;
+  left: 107%;
+  top: -5px;
+}
+
+.top {
+  bottom: 110%;
+  right: -5px;
+}
+
+.bottom {
+  top: 110%;
+  left: -5px;
+}
+
+/* tooltip arrow - left */
+.leftside:hover .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+
+/* tooltip arrow - right */
+.rightside:hover .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+/* tooltip arrow - top */
+.topside:hover .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* tooltip arrow - bleftsideottom */
+.bottomside:hover .tooltip-text::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}

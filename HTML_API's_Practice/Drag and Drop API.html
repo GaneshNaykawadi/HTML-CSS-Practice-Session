@@ -1,0 +1,45 @@
+<!--
+
+// Name of Project: Drag and Drop API.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 02 July, 2020.
+// Description: Drag and Drop API demo using HTML and CSS.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8" />
+        <meta name="author" content="Ganesh Naykawadi"/>
+        <meta name="description" content="Demonstration to use of Drag and Drop functionality in HTML." />
+        <meta name="keywords" content="HTML, Drag and Drop, API" />
+        <title>Drag and Drop Functionality</title>
+        <link rel="stylesheet" href="../Stylesheets/Drag-Drop-API-Style.css">
+        <link rel="stylesheet" href="../Stylesheets/Sudo-Style.css">
+    </head>
+    <body>
+        <h3>Drag and Drop Demo </h3>
+        <div id="first-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="second-image-block" src="../Media/LINUX.ico" height="200px" width="250px" draggable="true" ondragstart="drag(event)" />
+        </div>
+        <div id="second-block" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <!-- javaScript code -->
+        <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+    </body>
+</html>

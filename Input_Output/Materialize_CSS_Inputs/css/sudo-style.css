@@ -1,0 +1,27 @@
+body {
+    background-color: #F8F9F9;
+}
+
+#material-form {
+    width: 850px;
+    height: 1000px;
+    margin: auto;
+    padding-top: 50px;
+    margin-bottom: 70px;
+}
+
+.card-panel {
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.input-field label {
+    color: #148F77;
+    font-size: 16px;
+  }
+
+form label {
+    color: #148F77;
+}
+

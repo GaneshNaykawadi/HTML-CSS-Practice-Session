@@ -1,0 +1,29 @@
+/********************************************************************************
+
+// Name of Project: HTML-CSS-Practice Session.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 01 July, 2020.
+// NOTE: This is super style file contains comman css code.
+
+*********************************************************************************/
+
+@font-face {
+  font-family: 'Ubuntu-Regular';
+  src: url("../fonts/Ubuntu-Regular.ttf");
+}
+@font-face {
+  font-family: 'Nunito-Sans-Regular';
+  src: url("../fonts/Nunito-Sans-Regular.ttf");
+}
+
+body {
+  margin-left: 30px;
+  font-family: 'Nunito-Sans-Regular';
+}
+
+h3 {
+  padding: 5px;
+  text-align: center;
+  font-family: 'Ubuntu-Regular';
+  color: darkcyan;
+}

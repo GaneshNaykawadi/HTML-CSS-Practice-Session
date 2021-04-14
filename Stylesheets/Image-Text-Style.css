@@ -1,0 +1,59 @@
+/********************************************************************************
+
+// Name of Project: Image Text.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 25 July, 2020.
+// HTML File: Image_Text.html
+
+*********************************************************************************/
+
+.container {
+  position: relative;
+}
+
+.top-left {
+  position: absolute;
+  color: white;
+  top: 20px;
+  left: 25px;
+  font-size: 1em;
+}
+
+.top-right {
+  position: absolute;
+  color: white;
+  top: 20px;
+  right: 25px;
+  font-size: 1em;
+}
+
+.centered {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-size: 1em;
+}
+
+.bottom-right {
+  position: absolute;
+  color: white;
+  bottom: 30px;
+  right: 25px;
+  font-size: 1em;
+}
+
+.bottom-left {
+  position: absolute;
+  color: white;
+  bottom: 30px;
+  left: 25px;
+  font-size: 1em;
+}
+
+img {
+  max-width: 100%;
+  max-height: 550px;
+  background: rgba(46, 49, 49, 0.2);
+}

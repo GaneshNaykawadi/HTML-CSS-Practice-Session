@@ -1,0 +1,61 @@
+<!--
+
+// Name of Project: Object Fit Property.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 04 August, 2020.
+// Description: Object Fit Property functionality demo using HTML and CSS.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Object Fit</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Ganesh Naykawadi">
+    <meta name="description" content="This Demo shows how to use 'Object Fit' Property using the HTML and CSS.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" href="../Stylesheets/Sudo-Style.css">
+    <style>
+      img {
+        width: 800px;
+        height: 600px;
+        background-color: yellow;
+      }
+      p {
+        font-weight: bold;
+        font-size: 1.2vw;
+      }
+
+      /* Object Fit Properties */
+      .fill {object-fit: fill;}
+      .contain {object-fit: contain;}
+      .cover {object-fit: cover;}
+      .scale-down {object-fit: scale-down;}
+      .none {object-fit: none;}
+    </style>
+  </head>
+  <body>
+    <h3>Object Fit Property</h3>
+    <br>
+
+    <p>01. No Object Fit:</p>
+    <img src="../Media/nature.jpg" alt="nature image" class="original-image">
+
+    <p>02. Object Fit: fill(default)</p>
+    <img src="../Media/nature.jpg" alt="nature image" class="fill">
+
+    <p>03. Object Fit: contain</p>
+    <img src="../Media/nature.jpg" alt="nature image" class="contain">
+
+    <p>04. Object Fit: cover</p>
+    <img src="../Media/nature.jpg" alt="nature image" class="cover">
+
+    <p>05. Object Fit: scale-down</p>
+    <img src="../Media/nature.jpg" alt="nature image" class="scale-down">
+
+    <p>06. Object Fit: none</p>
+    <img src="../Media/nature.jpg" alt="nature image" class="none">
+  </body>
+</html>

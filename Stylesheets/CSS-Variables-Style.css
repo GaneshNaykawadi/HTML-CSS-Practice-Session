@@ -1,0 +1,31 @@
+/********************************************************************************
+
+// Name of Project: CSS-Variables.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 05 July, 2020.
+// HTML File: CSS-Variables.html
+
+*********************************************************************************/
+
+/* variable declaration */
+
+:root {
+  --main-width: 300px;
+  --main-bg-color: #52be80;
+  --main-txt-color: #f2f3f4;
+  --main-padding: 10px;
+  --main-font-size: 1.5vw;
+}
+
+.main-div {
+  width: var(--main-width);
+  border: 2px solid grey;
+  background-color: var(--main-bg-color);
+  padding: var(--main-padding);
+}
+
+.txt {
+  font-weight: bold;
+  font-size: var(--main-font-size);
+  color: var(--main-txt-color);
+}

@@ -1,0 +1,77 @@
+<!--
+
+// Name of Project: Drag and Drop API.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 02 July, 2020.
+// Description: Drag and Drop API demo using HTML and CSS.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8" />
+        <meta name="author" content="Ganesh Naykawadi"/>
+        <meta name="description" content="Demonstration to use of Geolocation API in HTML." />
+        <meta name="keywords" content="HTML, Geolocation, API" />
+        <title>HTML Geolocation API Demonstration</title>
+
+        <!-- Style Sheet -->
+        <link rel="stylesheet" href="../Stylesheets/Sudo-Style.css">
+        <style>
+
+            #display-cords-block {
+                color: maroon;
+                height: 100px;
+                width: 100%;
+            }
+
+            #display-map {
+                width: 100%;
+                height: 400px;
+                background-color: gray;
+            }
+
+            #btn-Result {
+                padding: 10px;
+                background-color: blue;
+                color: white;
+                font-size: 12px;
+                font-weight: bold;
+                border: 1px solid
+                border-radius: darkblue;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h3>HTML 5 Geolaction API Demonstration </h3>
+        <div id="display-map">
+
+        </div>
+        <div id="display-cords-block">
+            <p id="display-cords"></p>
+        </div>
+        <button type="submit" id="btn-Result" onClick="getUsersCurrentLocation()">Get My Cordinates</button>
+
+        <script>
+            function initMap(){
+                var uluru = {lat: 19.7514798, lng: 5.7138884};
+                var map = new google.maps.Map(document.getElementById('display-map'), {
+                    zoom: 4,
+                    center: uluru
+                });
+
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                });
+
+            }
+        </script>
+        <!-- JavaScript Code to load the API from the specified URL-->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtG2CNc5Ng1VfUF0M9XQ5y8oFpsxZ2N9k&callback=initMap"></script>
+        <script src="../Scripts/Geolocation.js"></script>
+    </body>
+</html>

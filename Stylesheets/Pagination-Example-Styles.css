@@ -1,0 +1,36 @@
+/********************************************************************************
+
+// Name of Project: HTML Pagination.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 07 July, 2020.
+// HTML File: Pagination-Example.html
+
+*********************************************************************************/
+
+.pagination {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.pagination a {
+  padding: 10px 20px;
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background-color .4s;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  border-radius: 25px;
+  color: white;
+}
+
+.pagination a:hover:not( .active){
+  background-color: #7ABD67;
+  border-radius: 25px;
+  color: white;
+}

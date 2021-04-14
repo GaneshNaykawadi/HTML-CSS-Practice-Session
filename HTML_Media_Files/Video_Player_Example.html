@@ -1,0 +1,46 @@
+<!--
+
+// Name of Project: HTML Video Player.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 05 July, 2020.
+// Description: HTML5 Video player functionality demo using HTML and CSS.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Video Example</title>
+    <meta name="author" content="Ganesh Naykawadi">
+    <meta name="description" content="This Demo shows how to use the <video> tag into a HTML.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../Stylesheets/Sudo-Style.css">
+    <style>
+      .video-container {
+        width: 100%;
+        height: auto;
+        margin: 0px;
+      }
+
+      video {
+        width: 99%;
+        max-height: 500px;
+        margin: auto;
+        border: 5px ridge black;
+        background-color: #17202A;
+      }
+    </style>
+</head>
+<body>
+  <h3> HTML Video Player Example </h3>
+  <div class="video-container">
+    <video src="../Media/example.ogg" controls type="video/ogg" muted poster="../Media/poster.jpg" preload="metadata">
+    <!-- track kind="subtitles" src="Media/Subtitle1.vtt" srclang="en" !-->
+    <p>your browser does not support video feature try to download it <a href="Media/Song.mp4">here</a> </p>
+  </div>
+</body>
+</html>

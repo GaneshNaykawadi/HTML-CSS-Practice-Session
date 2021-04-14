@@ -1,0 +1,36 @@
+/********************************************************************************
+
+// Name of Project: CSS 3D Transformation.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 27 July, 2020.
+// HTML File: 3D-Transformation.html
+
+*********************************************************************************/
+
+.header {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.example-box {
+  width: 200px;
+  height: 100px;
+  background-color: #ffd633;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.rotateX .example-box:hover {
+  transform: rotateX(150deg);
+  background-color: #e6b800;
+}
+
+.rotateY .example-box:hover {
+  transform: rotateY(150deg);
+  background-color: #e6b800;
+}
+
+.rotateZ .example-box:hover {
+  transform: rotateZ(150deg);
+  background-color: #e6b800;
+}

@@ -1,0 +1,41 @@
+/********************************************************************************
+
+// Name of Project: User Interface - resize and outline-offset.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 05 August, 2020.
+// HTML File: User_Interface.html
+
+*********************************************************************************/
+p {
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+div {
+  border: 2px solid black;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  padding-top: 30px;
+  overflow: auto;
+}
+
+.vertical {
+  resize: vertical;
+
+}
+
+.horizontal {
+  resize: horizontal;
+}
+.both {
+  resize: both;
+}
+
+.out-offset {
+  margin: 20px;
+  width: 550px;
+  border: 2px solid grey;
+  outline: 2px solid grey;
+  outline-offset: 14px;
+}

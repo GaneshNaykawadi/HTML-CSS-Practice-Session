@@ -1,0 +1,32 @@
+<!--
+
+// Name of Project: GBN Audio Player.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 15 July, 2020.
+// Description: HTML5 Audio player functionality demo using HTML and CSS.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GBN Player</title>
+    <meta name="author" content="Ganesh Naykawadi">
+    <meta name="description" content="This Demo shows how to use the <audio> tag into a HTML.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Stylesheets/Audio-Player-Style.css">
+    <link rel="stylesheet" href="../Stylesheets/Sudo-Style.css">
+    <script src="../Scripts/Audio-Player.js"></script>
+</head>
+<body>
+  <h3 id="song-title">Music Player</h3>
+  <div class="audio-container">
+    <!--input type="file" id="audio-file-selector" accept="audio/*" !-->
+    <input type="file" id="audio-file-selector" accept="audio/*" />
+    <canvas id="canvas"></canvas>
+    <audio id="audio-player" controls><p>Your browser doesn't support HTML5 audio. Look at <a href="../Media/Shape%20of%20You.mp3">here</a> instead.</p></audio>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/********************************************************************************
+
+// Name of Project: Drag and Drop API.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 02 July, 2020.
+// HTML File: Drag and Drop API.html
+
+*********************************************************************************/
+
+body {
+    margin: auto;
+    width: 20%;
+}
+
+div {
+    border: 2px solid black;
+    height: 250px;
+    width: 300px;
+}
+
+img {
+    height: inherit;
+    width: inherit;
+}

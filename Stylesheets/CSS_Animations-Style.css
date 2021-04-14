@@ -1,0 +1,112 @@
+/********************************************************************************
+
+// Name of Project: CSS Animations.
+// Author Name: Ganesh B Naykawadi.
+// Date Created: 30 July, 2020.
+// HTML File: 2D-Transformation.css
+
+*********************************************************************************/
+
+body {
+  padding-left: 20px;
+}
+
+/* box used for animations */
+.box {
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+/* normal animation */
+.change-color {
+  animation-name: change-div-color;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: 2;
+}
+
+@keyframes change-div-color {
+  from {background-color: white;}
+  to {background-color: black;}
+}
+
+/* normal animation with percentage stops */
+@keyframes change-div-color-percentage {
+  0% {background-color: #fbeee6;}
+  20% {background-color:  #ca6f1e;}
+  40% {background-color:  #e67e22;}
+  60% {background-color:   #ca6f1e;}
+  80% {background-color:   #784212;}
+  100% {background-color:  #784212;}
+}
+
+.change-color-percentage:hover {
+  animation-name: change-div-color-percentage;
+  animation-duration: 5s;
+  animation-delay: 0.2s;
+}
+
+/* animation style - forward/reverse */
+@keyframes reverse-animation-div-style {
+  0% {background-color: #fbeee6;}
+  50% {background-color:   #ca6f1e;}
+  100% {background-color:  #784212;}
+}
+
+.reverse-animation-style {
+  animation-name: reverse-animation-div-style;
+  animation-duration: 4s;
+  animation-delay: 0.4s;
+  animation-iteration-count: 2;
+  animation-direction: reverse;
+}
+
+@keyframes alternate-animation-div-style {
+  0% {background-color: #fbeee6;}
+  50% {background-color:   #ca6f1e;}
+  100% {background-color:  #784212;}
+}
+
+.alternate-animation-style {
+  animation-name: alternate-animation-div-style;
+  animation-duration: 4s;
+  animation-delay: 0.4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+@keyframes alternate-reverse-animation-div-style {
+  0% {background-color: #fbeee6;}
+  50% {background-color:   #ca6f1e;}
+  100% {background-color:  #784212;}
+}
+
+.alternate-reverse-animation-style {
+  animation-name: alternate-reverse-animation-div-style;
+  animation-duration: 4s;
+  animation-delay: 0.4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate-reverse;
+}
+
+/*  Animation Speed Curve Example css */
+
+.animation-speed-div {
+  background-color: #ca6f1e;
+  position: relative;
+  animation: animation-speed-keyframes 10s infinite;
+}
+
+#ease {animation-timing-function: ease;}
+#linear {animation-timing-function: linear;}
+#ease-in {animation-timing-function: ease-in;}
+#ease-out {animation-timing-function: ease-out;}
+#ease-in-out {animation-timing-function: ease-in-out;}
+
+@keyframes animation-speed-keyframes {
+  from {left: 0%;}
+  to {left: 100%;}
+}
